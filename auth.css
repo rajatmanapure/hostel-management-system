@@ -1,0 +1,171 @@
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(8px);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    padding: 30px;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+}
+
+.login-card-header h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFC312;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.login-form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #b8b2b2;
+}
+
+.login-form-group input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(231, 229, 229, 0.9);
+    font-size: 16px;
+    color: #070606;
+    width: 100%;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+}
+
+.login-form-group input:focus {
+    outline: none;
+    background-color: #fdfafa;
+    box-shadow: 0 0 8px #FFC312;
+    text-align: left;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 50px; /* Right padding बढ़ाया ताकि icon overlap न करें */
+}
+
+.password-wrapper span {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #080808;
+    font-size: 18px;
+}
+
+.password-match-icon {
+    position: absolute;
+    right: 40px; /* Eye Icon और Password Match Icon में gap */
+    font-size: 18px;
+    color: green; /* ✅ के लिए ग्रीन */
+}
+
+.password-match-icon.wrong {
+    color: red; /* ❌ के लिए रेड */
+}
+
+
+.login-btn {
+    background: linear-gradient(to right, #FFC312, #F79F1F);
+    color: black;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.login-btn:hover {
+    background: linear-gradient(to right, #F79F1F, #FFC312);
+    box-shadow: 0 8px 20px rgba(255, 195, 18, 0.7);
+}
+
+.login-links {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-links a {
+    color: #FFC312;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.login-text-danger {
+    text-align: center;
+    color: #ff4d4d;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .login-card {
+        padding: 20px;
+    }
+    .login-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .login-card-header h3 {
+        font-size: 20px;
+    }
+    .login-form-group input {
+        font-size: 14px;
+        text-align: left;
+    }
+}

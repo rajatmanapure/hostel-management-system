@@ -1,0 +1,648 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  background-image: url('bg.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Change as needed */
+  padding: 15px 20px;
+  color: white;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin: 10px;
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.mobile-menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.mobile-menu-open {
+    display: flex;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: white; /* White bars */
+  margin: 6px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ✅ Mobile Styles */
+@media (max-width: 700px) {
+  /* Disable background scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(243, 233, 233);
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(40, 8, 219, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.mobile-menu-open {
+    display: flex;
+    max-height: 90vh; /* Prevents menu from going off screen */
+    overflow-y: auto; /* Enables scrolling inside menu */
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .navbar-content {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+
+  .navbar h1 {
+    margin: 0 auto;  /* Center the logo on mobile */
+    text-align: center;
+  }
+
+  /* ✅ Fix Hamburger Animation */
+  .bar.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* Hero Section */
+.home {
+  text-align: center;
+  padding-top: 0;
+}
+
+.home img {
+  padding-top: 0px;
+  width: 100%; /* Change 200% to 100% to maintain proper scaling */
+  height: auto;
+  object-fit: cover;
+  max-width: 1500px;
+}
+
+.homeimg img {
+  border-radius: 15px;
+  width: 100%; /* Change 80% to 100% to make the image occupy the full container */
+  height: auto;
+  margin: 0; /* Set margin to 0 to make sure the image doesn't have extra space around it */
+  padding: 0;
+  max-width: 700px;
+}
+
+
+
+
+.home-heading {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5507f362;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+}
+
+.home-text p {
+  margin: 20px; /* Responsive margin */
+ color: #fcfcfcbc; 
+  font-weight: bold;
+}
+.home-text h1 {
+  color: #fcfcfcbc; /* Change this to your preferred color */
+  font-weight: bold;
+}
+
+
+.home-subtext {
+  font-size: 1rem;
+  color: #f3ebeb;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Notice */
+.notice {
+  width: 90%; /* Responsive width */
+  max-width: 500px; /* Max width for larger screens */
+  padding: 30px;
+  margin: 50px auto;
+  border: 2px solid #fbf6f6;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 4px 4px 10px rgba(236, 234, 234, 0.933);
+  background-color: #16A085;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Gallery */
+.gallery {
+  text-align: center;
+  padding: 20px;
+  font-family: Jomolhari;
+}
+.gallery {
+  color: #fcfcfcbc; /* Change this to your preferred color */
+  font-weight: bold;
+}
+
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Key for responsiveness */
+  gap: 20px;
+}
+
+.image-wrapper {
+  width: 45%; /* Adjusted for better responsiveness */
+  transition: opacity 0.5s ease-in-out;
+  margin-bottom: 20px;
+ 
+}
+
+.image-wrapper img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  height: auto;
+  max-width: 300px;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.08); /* Adjusted scale */
+  opacity: 1;
+}
+.blurred {
+  filter: blur(5px);
+  opacity: 0.6;
+}
+
+
+/* Dining */
+.dining-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.dining-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #eceaea; /* Change this to your preferred color */
+  
+}
+
+.dining-description {
+  margin: 10px auto;
+  max-width: 600px;
+  font-size: 16px;
+  padding: 0 20px; /* Responsive padding */
+  color: #efeaea; /* Change this to your preferred color */
+  font-weight: bold;
+}
+
+.dining-slider {
+  display: flex;
+  flex-wrap: wrap; /* Key for responsiveness */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.large-image,
+.small-image {
+  width: 90%; /* Responsive width */
+  max-width: 500px; /* Max width for larger screens */
+  height: auto;
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+  margin-bottom: 10px;
+}
+
+
+/* Events */
+.events-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.events-title {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #fcfcfcbc; /* Change this to your preferred color */
+  font-weight: bold;
+
+}
+
+.line {
+  width: 50px;
+  height: 2px;
+  background-color: rgb(249, 22, 22);
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  flex-wrap: wrap; /* Key for responsiveness */
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.main-image,
+.small-image {
+  width: 80%; /* Responsive width */
+  max-width: 300px; /* Max width for larger screens */
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.5s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.small-image:hover {
+  transform: scale(1.05); /* Adjusted scale */
+  opacity: 1;
+}
+.main-image:hover{
+  transform: scale(1.09); /* Adjusted scale */
+  opacity: 1;
+}
+
+/* Security */
+.security-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.security-title {
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #fcfcfcbc; /* Change this to your preferred color */
+  font-weight: bold;
+
+}
+
+.line {
+  width: 50px; /* Adjusted line width */
+  height: 3px;
+  background-color: rgb(251, 243, 243);
+}
+
+/* Security Images */
+.security-images {
+  display: flex;
+  flex-wrap: wrap; /* Key for responsiveness */
+  justify-content: center;
+  gap: 20px; /* Reduced gap */
+  margin-top: 30px;
+  
+}
+
+.security-box {
+  width: 90%; /* Responsive width */
+  max-width: 300px; /* Max width */
+  height: auto;
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.security-image {
+  width: 80%;
+  height: auto;
+  border-radius: 12px;
+  max-width: 700px;
+}
+
+.security-box:hover {
+  transform: scale(1.05); /* Adjusted scale */
+  transition: 0.3s ease-in-out;
+}
+
+/* Media Queries for fine-tuning */
+@media (min-width: 768px) { /* Tablet and larger */
+  .image-wrapper {
+      width: 30%; /* Back to original width on larger screens */
+  }
+
+  .large-image, .small-image {
+      max-width: 500px; /* Adjust max-width as needed */
+  }
+
+  .main-image, .small-image {
+      max-width: 400px; /* Adjust max-width as needed */
+  }
+
+  .security-box {
+      max-width: 300px; /* Adjust max-width as needed */
+  }
+}
+
+@media (min-width: 1200px) { /* Desktop and larger */
+  .image-wrapper {
+      width: 30%; /* Back to original width on larger screens */
+  }
+   .large-image, .small-image {
+      max-width: 500px; /* Adjust max-width as needed */
+  }
+
+  .main-image, .small-image {
+      max-width: 400px; /* Adjust max-width as needed */
+  }
+
+  .security-box {
+      max-width: 300px; /* Adjust max-width as needed */
+  }
+}
+/*footer*/
+/* Footer.css */
+.footer-container {
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content */
+  padding-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px; /* Minimum width for each section */
+  padding: 10px;
+  text-align: left; /* Align text to the left within sections */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.footer-section h3 {
+  text-decoration: underline;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid gray;
+  padding-top: 10px;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box; /* Include padding in width */
+
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .footer-section {
+      flex: 1 1 100%; /* Each section takes full width on small screens */
+      min-width: 0; /* Remove min-width restriction on small screens */
+      margin-bottom: 20px; /* Add some spacing between sections */
+      text-align: center; /* Center text in sections on small screens */
+  }
+
+  .footer-section h3 {
+      text-align: center; /* Center the heading on smaller screens */
+  }
+
+  .footer-content {
+      flex-direction: column; /* Stack sections vertically */
+      align-items: center; /* Center content horizontally */
+  }
+}
+
+/*complent section*/
+
+/* ComplaintForm.css */
+.complaint-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 20px; /* Reduced padding */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Use flexbox for centering and responsiveness */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.complaint-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 90%; /* Occupy most of the container width */
+  max-width: 600px; /* Set a maximum width */
+}
+
+.complaint-form label {
+  font-size: 16px; /* Slightly smaller label font */
+  font-weight: 500;
+}
+
+.complaint-form input,
+.complaint-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.complaint-form textarea {
+  height: 120px; /* Slightly taller textarea */
+}
+
+.complaint-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #16A085;
+  color: white;
+  font-size: 16px; /* Slightly smaller button font */
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.complaint-form button:hover {
+  background-color: #138d75;
+}
+
+.image-preview img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in width */
+
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .complaint-container {
+    padding: 15px; /* Reduce padding on smaller screens */
+    margin-top: 20px; /* Adjust margin-top for mobile */
+    margin-bottom: 20px; /* Adjust margin-bottom for mobile */
+
+  }
+
+  .form-title {
+    font-size: 20px; /* Smaller title font */
+  }
+
+  .complaint-form label {
+    font-size: 14px; /* Smaller label font */
+  }
+
+  .complaint-form input,
+  .complaint-form textarea,
+  .complaint-form button {
+    font-size: 14px; /* Smaller input/textarea/button font */
+  }
+}

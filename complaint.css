@@ -1,0 +1,110 @@
+/* ComplaintForm.css */
+
+/* Container for the complaint form */
+.complaint-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #3b121273;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title of the form */
+  .form-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #cbcaca;
+  }
+  
+  /* Success message */
+  .success-message {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Form fields */
+  .complaint-form input,
+  .complaint-form textarea,
+  .complaint-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .complaint-form input[type="text"],
+  .complaint-form input[type="tel"],
+  .complaint-form input[type="email"] {
+    font-size: 1rem;
+  }
+  
+  .complaint-form textarea {
+    height: 120px;
+    font-size: 1rem;
+  }
+  
+  /* Submit button */
+  .complaint-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .complaint-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Autocomplete suggestion box */
+  .autocomplete-container {
+    position: relative;
+  }
+  
+  .suggestion-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .suggestion-list li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestion-list li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Contact info under complaint field */
+  .contact-info {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Image preview */
+  .complaint-form img {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 20px;
+  }
+  

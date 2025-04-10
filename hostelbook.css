@@ -1,0 +1,185 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: url('./bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.form-container {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+form {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+select {
+  display: block;
+  position: relative;
+  z-index: 10;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+img {
+  max-width: 100px;
+  margin: 10px 0;
+}
+
+.user-info {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%; /* ✅ Make it full width */
+  max-width: 570px; /* ✅ Match form-container width */
+  margin-bottom: 20px; /* ✅ Push form down */
+}
+/* ✅ Center user info text properly */
+.user-info h2, .user-info p {
+  color: #fff;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* ✅ Make it full width */
+  display: block; /* ✅ Ensure it behaves as a block element */
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logout-button:hover {
+  background-color: #b02a37;
+}
+
+
+.confirmation {
+  background: rgba(0, 255, 0, 0.2);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4);
+}
+@media (max-width: 768px) {
+  .user-info {
+    width: 95%; /* ✅ Ensure responsiveness */
+    max-width: 95%;
+    margin: 0 auto 20px auto;
+  }
+}
+
+/* Admission Confirmation CSS */
+.admission-confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.admission-confirmation h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.yes-button, .no-button {
+  width: 120px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.yes-button {
+  background-color: #28a745;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+}
+
+.no-button {
+  background-color: #dc3545;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+}
+
+.yes-button:hover, .no-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

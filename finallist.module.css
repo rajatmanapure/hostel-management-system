@@ -1,0 +1,102 @@
+/* Container */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: url("dashboard.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+/* Heading */
+.heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #5959ec;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 4px rgba(29, 153, 147, 0.4);
+  margin-bottom: 15px;
+}
+
+/* Table Container */
+.tableContainer {
+  width: 95%;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  color: rgb(17, 16, 16);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+}
+
+/* Request Table */
+.requestTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader,
+.tableCell {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tableHeader {
+  background-color: #222;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-transform: uppercase;
+}
+
+.tableRow:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.acceptBtn,
+.rejectBtn {
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  min-width: 100px;
+  transition: background-color 0.3s;
+}
+
+.acceptBtn {
+  background-color: #16a085;
+}
+
+.acceptBtn:hover {
+  background-color: #218838;
+}
+
+.rejectBtn {
+  background-color: #e74c3c;
+}
+
+.rejectBtn:hover {
+  background-color: #c0392b;
+}
+
+/* Text Messages */
+.loadingText,
+.errorText,
+.noDataText {
+  font-size: 18px;
+  color: #ffcc00;
+  margin-top: 10px;
+}
+
+.errorText {
+  color: red;
+}

@@ -1,0 +1,137 @@
+/* ✅ General Container Styling */
+.mess-payment-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* ✅ Heading */
+.mess-payment-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ✅ Payment Type Selection */
+.payment-type-selection {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.payment-type-selection select {
+    padding: 8px;
+    margin-left: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ✅ Payment Table */
+.mess-payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.mess-payment-table th,
+.mess-payment-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.mess-payment-table th {
+    background: #007bff;
+    color: #fff;
+}
+
+.mess-payment-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.mess-payment-table tbody tr:hover {
+    background: #f1f1f1;
+}
+
+/* ✅ Status Indicators */
+.completed-status {
+    color: green;
+    font-weight: bold;
+}
+
+.pending-status {
+    color: red;
+    font-weight: bold;
+}
+
+/* ✅ Payment Mode Styling */
+.online-mode {
+    color: blue;
+    font-weight: bold;
+}
+
+.offline-mode {
+    color: orange;
+    font-weight: bold;
+}
+
+/* ✅ Add Offline Payment Form */
+.add-payment-form {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-payment-form h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.add-payment-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.add-payment-form input {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-payment-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-payment-form button:hover {
+    background: #218838;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .mess-payment-container {
+        width: 95%;
+    }
+
+    .add-payment-form input {
+        width: 100%;
+    }
+}

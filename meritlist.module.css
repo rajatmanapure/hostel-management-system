@@ -1,0 +1,94 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: url("dashboard.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #5959ec	;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 4px rgba(29, 153, 147, 0.4);
+  margin-bottom: 15px;
+}
+
+.radioButtons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.radioLabel {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.tableContainer {
+  width: 95%; /* Increased width */
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+}
+
+.meritTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.meritTable th,
+.meritTable td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meritTable th {
+  background-color: #222;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-transform: uppercase;
+}
+
+.meritTable tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.downloadBtn {
+  background-color: #16a085;
+  color: white;
+  border: none;
+  padding: 5px 15px;  /* Reduced padding to make the button smaller */
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: auto; /* Set width to auto so it fits the text */
+  min-width: 100px; /* Ensures it's not too small */
+  text-align: center;
+}
+
+
+.downloadBtn:hover {
+  background-color: #218838;
+}
+
+.loadingText,
+.errorText,
+.noDataText {
+  font-size: 18px;
+  color: #ffcc00;
+  margin-top: 10px;
+}

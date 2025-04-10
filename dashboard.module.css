@@ -1,0 +1,134 @@
+.dashboardContainer {
+    width: 100%;
+    height: 100vh;
+    background: url("dashboard.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  /* Heading */
+  .heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #9208ee;
+    text-shadow: 3px 3px 6px rgba(75, 85, 16, 0.6);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .heading:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Grid Layout */
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin-top: 20px;
+  }
+  
+  /* Modern Card Style */
+  .card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Text Styling */
+  .card h3 {
+    font-size: 22px;
+    color: #23f072;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Sidebar Menu */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #121212;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .sidebar:hover {
+    width: 270px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  
+  /* Logout Button */
+  .logout {
+    background: #ff4444;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .logout:hover {
+    background: #cc0000;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .gridContainer {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  
+    .card h3 {
+      font-size: 18px;
+    }
+  
+    .card p {
+      font-size: 24px;
+    }
+  }
+  

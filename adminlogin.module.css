@@ -1,0 +1,150 @@
+/* 🚄 Border Animation */
+@keyframes movingBorder {
+  0% {
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.7);
+    border-top: 2px solid white;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+  }
+  25% {
+    border-top: 2px solid transparent;
+    border-right: 2px solid white;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+  }
+  50% {
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid white;
+    border-left: 2px solid transparent;
+  }
+  75% {
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid white;
+  }
+  100% {
+    border-top: 2px solid white;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+  }
+}
+
+/* 🏠 Page Container */
+.adminPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url("adminlogin.jpg") center/cover no-repeat;
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+  animation: movingBorder 5s linear infinite;
+}
+
+/* 📦 Login Box */
+.wrapper {
+  width: 400px;
+  padding: 30px;
+  text-align: center;
+  background: rgba(19, 13, 13, 0.15);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  animation: movingBorder 5s linear infinite;
+}
+
+/* 🏷️ Normal Heading */
+.heading {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+/* ✏️ Input Fields */
+.inputField {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.inputField label {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.inputField input {
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* 🔑 Password Field */
+.passwordContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordContainer input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #bbe22f;
+  font-size: 18px;
+}
+
+/* 🎯 Login Button */
+.loginBtn {
+  all: unset;
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  box-shadow: 0 4px 10px rgba(255, 65, 108, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.loginBtn:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  box-shadow: 0 6px 15px rgba(255, 75, 43, 0.7);
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 500px) {
+  .wrapper {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+}

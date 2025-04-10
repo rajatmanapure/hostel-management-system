@@ -1,0 +1,158 @@
+/* Only apply these styles to the SignUp page */
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('./bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signup-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.signup-form h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.signup-form label {
+  display: block;
+  text-align: left;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Input field styling */
+.signup-form input {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #666; /* Dark gray border */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #ddd; /* Light gray text */
+  background-color: #333; /* Light black background */
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.signup-form input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+  background-color: #444; /* Slightly lighter black */
+  color: #fff;
+}
+
+/* Password container styling */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 0.9rem;
+  padding-right: 50px;
+  border: 1px solid #666; /* Dark gray */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #ddd; /* Light gray */
+  background-color: #333; /* Light black */
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.password-container input:focus {
+  border-color: #6a11cb;
+  background-color: #444; /* Slightly lighter black */
+  color: #fff;
+}
+
+/* White Eye Icon */
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: white; /* White eye icon */
+  font-size: 1.4rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.eye-icon:hover {
+  opacity: 1;
+}
+
+/* Match/Mismatch Icons */
+.match-icon {
+  position: absolute;
+  right: 35px;
+  font-size: 1.2rem;
+}
+
+.match {
+  color: green;
+}
+
+.mismatch {
+  color: red;
+}
+
+.signup-form button {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.signup-form button:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  transform: scale(1.02);
+}
+
+.signup-form p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-link {
+  color: #2575fc;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}

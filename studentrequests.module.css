@@ -1,0 +1,118 @@
+.studentRequestsContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: url("dashboard.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 20px;
+    overflow-y: auto;
+  }
+  
+  .requestsTableContainer {
+    width: 90%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    color: rgb(228, 210, 210);
+    box-shadow: 0px 4px 10px rgba(22, 22, 22, 0.3);
+    overflow-x: auto;
+  }
+  
+  .requestsTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .requestsTable th,
+  .requestsTable td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(235, 12, 12, 0.2);
+  }
+  
+  .requestsTable th {
+    background-color: #222;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-transform: uppercase;
+  }
+  
+  .requestsTable tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .requestsTable td {
+    font-size: 16px;
+    color: #191717;
+  }
+  
+  .actionButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .acceptBtn,
+  .deleteBtn {
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .acceptBtn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .acceptBtn:hover {
+    background-color: #218838;
+  }
+  
+  .deleteBtn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .deleteBtn:hover {
+    background-color: #b02a37;
+  }
+  
+  .headingPrimary {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+  }
+  
+  .noRequests {
+    font-size: 20px;
+    color: #bbb;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .requestsTable th,
+    .requestsTable td {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .acceptBtn,
+    .deleteBtn {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }
+  
